@@ -5,7 +5,9 @@ export type PublicRoutesTypes = {
 };
 
 export type BottomTabsTypes = {};
-export type PrivateRoutesTypes = {};
+export type PrivateRoutesTypes = {
+  HomeScreen: undefined;
+};
 
 export type PublicNavigationProps =
   NativeStackNavigationProp<PublicRoutesTypes>;

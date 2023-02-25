@@ -12,23 +12,33 @@ import {
   VStack,
   ScrollView,
 } from 'native-base';
+import {Alert} from 'react-native';
 
 import {PublicRoutesTypes} from '../../types/AllRoutes';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {COLORS} from '../../styles';
 import {IMAGES} from '../../assets';
+import {useAppContext} from '../../contexts';
 
 type Props = NativeStackScreenProps<PublicRoutesTypes, 'Login'>;
 const Login = ({navigation}: Props) => {
   const [showPassword, setShowPassword] = useState(true);
+  const {setIsLoggedIn} = useAppContext();
   const {
     control,
     handleSubmit,
     formState: {errors},
   } = useForm();
 
-  const onSubmit = async (numberData: any) => {
-    console.log('object');
+  const onSubmit = async (data: any) => {
+    if (
+      data?.email === 'user1@gmail.com' &&
+      data?.password === 'user1@gmail.com'
+    ) {
+      setIsLoggedIn(true);
+    } else {
+      Alert.alert('Error', 'Please provide valid email and password');
+    }
   };
 
   return (
