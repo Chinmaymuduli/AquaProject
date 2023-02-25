@@ -2,7 +2,7 @@ import {extendTheme} from 'native-base';
 
 // global colors
 export const COLORS = {
-  primary: '#5B50A1',
+  primary: '#242E75',
   secondary: '#C43C5C',
   textWhite: '#FFFFFF',
   textSecondary: '#756bb3',

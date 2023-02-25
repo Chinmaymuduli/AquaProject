@@ -36,19 +36,18 @@ const Login = ({navigation}: Props) => {
       <ScrollView
         _contentContainerStyle={{pb: 7}}
         keyboardShouldPersistTaps={'always'}>
-        <Box px={8} mt={20}>
+        <Box mt={8} px={1}>
           <Center>
             <Image
-              source={IMAGES.LOGO2}
+              source={IMAGES.LOGIN}
               alt="logo"
               style={{
-                width: 200,
-                height: 80,
+                width: 230,
+                height: 200,
               }}
-              resizeMode={'contain'}
             />
           </Center>
-          <Box mt={10}>
+          <Box mt={10} bgColor={'blue.50'} px={5} borderRadius={30}>
             <Box>
               <Text fontSize={30} fontFamily={'Montserrat-Bold'}>
                 Welcome,
@@ -134,16 +133,16 @@ const Login = ({navigation}: Props) => {
                 </FormControl.ErrorMessage>
               </FormControl>
             </VStack>
-          </Box>
-          <Box mt={9}>
-            <Button
-              // colorScheme={COLORS.primary}
-              bgColor={COLORS.primary}
-              borderRadius={8}
-              _text={{fontWeight: 'bold', color: '#fff'}}
-              onPress={handleSubmit(onSubmit)}>
-              Continue
-            </Button>
+            <Box mt={9} pb={10}>
+              <Button
+                // colorScheme={COLORS.primary}
+                bgColor={COLORS.primary}
+                borderRadius={8}
+                _text={{fontWeight: 'bold', color: '#fff'}}
+                onPress={handleSubmit(onSubmit)}>
+                Continue
+              </Button>
+            </Box>
           </Box>
         </Box>
       </ScrollView>
